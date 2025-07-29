@@ -1,3 +1,5 @@
+"Hello everyone, Sorry this took a while to automate  it was quite complex. The instructions are in the README file . All you need to do is create an Excel file with the columns named according to the instructions, then run the script. It will automatically extract the booking links.I recommend running it in batches of 20–50 and spot-checking for accuracy. This is just a tool to speed up the process, but I still advise manually verifying the results. Based on my calculations, the accuracy is around 90%. I’ll work on automating the rest of the allied health professionals next and will update you soon."
+
 # Comprehensive Booking Extractor - Setup Guide
 
 A complete guide to set up and run the healthcare practitioner booking URL and operating hours extractor on any laptop with Python 3.
