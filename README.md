@@ -1,3 +1,6 @@
+#1 - Booking link extractor (read me)
+
+
 "Hello everyone, Sorry this took a while to automate  it was quite complex. The instructions are in the README file . All you need to do is create an Excel file with the columns named according to the instructions, then run the script. It will automatically extract the booking links.I recommend running it in batches of 20–50 and spot-checking for accuracy. This is just a tool to speed up the process, but I still advise manually verifying the results. Based on my calculations, the accuracy is around 90%. I’ll work on automating the rest of the allied health professionals next and will update you soon."
 
 # Comprehensive Booking Extractor - Setup Guide
@@ -393,12 +396,60 @@ Once you've completed the setup:
 
 You can now process healthcare practitioner data to extract booking URLs and operating hours efficiently!
 
-## 📞 Support
+------- 
 
-If you encounter issues:
-1. Check the troubleshooting section above
-2. Verify all prerequisites are met
-3. Test with the provided examples first
-4. Check Python and package versions
+#2- Kin website extractor (read me)
 
-The script is designed to be robust and handle most common scenarios automatically.
+This document provides a comprehensive guide for using the kinesiologist_website extractor.py script. It includes all necessary information for your team, from setting up the required software to troubleshooting common issues.
+
+BC Kinesiologist Website Extractor
+This Python script is a web scraper designed to extract information on kinesiologists from the BC Association of Kinesiologists website. The tool is robust and includes features to handle common scraping challenges.
+
+Key Features
+Targeted Scraping: The script can be configured to start and stop at any practitioner number.
+
+Detailed Data Extraction: It extracts practitioner names, genders, practice areas, workplaces, and profile URLs.
+
+Website Discovery: The tool is designed to find clinic websites by searching Google and other sources.
+
+Checkpoint Saving: Progress is automatically saved to a CSV file at regular intervals, allowing you to resume the process if it's interrupted.
+
+Final Output: A final CSV file is generated with all collected data.
+
+Prerequisites
+To run this script, you must have Python 3 installed on your computer.
+
+You also need the following Python libraries. Think of these as special tools the script needs to do its job:
+
+requests
+
+beautifulsoup4
+
+googlesearch-python
+
+To install them, open your terminal (on Mac) or Command Prompt (on Windows) and type the following command, then press Enter:
+
+pip install requests beautifulsoup4 googlesearch-python
+
+Usage Instructions
+Save the Script: Make sure the kinesiologist_website extractor.py file is saved on your computer.
+
+Install Libraries: Run the pip install command from the "Prerequisites" section if you haven't already.
+
+Run the Script: In your terminal, navigate to where you saved the file and run it with this command:
+
+python kinesiologist_website extractor.py
+
+Troubleshooting & Other Instructions
+Changing the Scraping Range: The script is set to start from record 101 and scrape 200 records by default. To change this, open the kinesiologist_website extractor.py file in a text editor and find these two lines in the KinesiologistNext200 class:
+
+self.max_practitioners = 200  # Change this to the total number of people to find.
+self.target_start = 100        # Change this to 0 to start from the beginning, or any number to start at a different record.
+
+Change the numbers to whatever you want, then save and run the script again.
+
+Script Interrupted: If you stop the script by pressing Ctrl+C, don't worry. The last saved "checkpoint" file will contain all the progress made up to that point. You can manually restart from the last checkpoint if needed.
+
+ModuleNotFoundError or ImportError: If you see an error that says something like "ModuleNotFoundError: No module named 'requests'", it means you forgot to install one of the required libraries. Go back to the "Prerequisites" section and run the pip install command again.
+
+Rate Limiting Message: If the script prints a message about "rate limiting," this is normal. It means the website or search engine asked the script to slow down, and the script is designed to do this automatically. Just let it continue.
