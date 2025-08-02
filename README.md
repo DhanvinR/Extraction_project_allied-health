@@ -453,3 +453,55 @@ Script Interrupted: If you stop the script by pressing Ctrl+C, don't worry. The 
 ModuleNotFoundError or ImportError: If you see an error that says something like "ModuleNotFoundError: No module named 'requests'", it means you forgot to install one of the required libraries. Go back to the "Prerequisites" section and run the pip install command again.
 
 Rate Limiting Message: If the script prints a message about "rate limiting," this is normal. It means the website or search engine asked the script to slow down, and the script is designed to do this automatically. Just let it continue.
+
+-----
+
+#3 - General website extractor - Can be used for any allied health
+
+
+
+# 📘 CLINIC WEBSITE FINDER
+
+This tool is designed to automatically find clinic website URLs for **Registered Massage Therapists (RMTs)** based on their name and street address using automated search.
+
+However, it can be **easily adapted** to work with **any other allied health professionals** such as:
+- Physiotherapists  
+- Chiropractors  
+- Occupational Therapists  
+- Kinesiologists  
+...as long as you provide the relevant **practitioner name** and **clinic address**.
+
+---
+
+## 🗂️ How to Use
+
+1. **Prepare your Excel file (`.xlsx`)**  
+   - Your file should have **three columns**:
+     - `Clinic/Facility Name`  
+     - `Street Address`  
+     - `Clinic Website` (leave blank; the script will fill this in)
+
+2. **Run the Python Script**  
+   - Execute `clinic_website_finder.py` in your terminal or IDE.
+
+3. **Output**  
+   - The script will search for the most likely website based on the clinic name and address and save the updated Excel file.
+
+---
+
+## 🔁 To Use for Other Allied Health Providers
+
+To adapt this for another health professional type:
+
+### ✅ Step 1: Change Your Input Excel File
+Update the spreadsheet to contain records of the **new provider type** with:
+- `Clinic/Facility Name`
+- `Street Address`  
+(Columns should remain the same structure.)
+
+### ✅ Step 2: Edit Script (If Needed)
+Open `clinic_website_finder.py` and make the following optional adjustments:
+- If you are hardcoding any RMT-specific terms or search hints (e.g., “RMT clinic”), update them to match the provider type, e.g., “physiotherapy clinic”, “chiropractic clinic”, etc.
+
+> 💡 In most cases, no code change is needed — just changing the Excel input is enough.
+
