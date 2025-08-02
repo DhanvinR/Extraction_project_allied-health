@@ -504,4 +504,62 @@ Open `clinic_website_finder.py` and make the following optional adjustments:
 - If you are hardcoding any RMT-specific terms or search hints (e.g., “RMT clinic”), update them to match the provider type, e.g., “physiotherapy clinic”, “chiropractic clinic”, etc.
 
 > 💡 In most cases, no code change is needed — just changing the Excel input is enough.
+--------
+#3- Clinic hours extractor
+
+
+
+# 🕒 CLINIC HOURS FINDER
+
+This script is designed to help retrieve **clinic hours of operation** by performing automated lookups based on clinic names and addresses — originally developed for **physiotherapy clinics**.
+
+However, this tool can be **easily adapted** to work with **any allied health clinics**, including:
+- Chiropractors  
+- Massage Therapists (RMTs)  
+- Kinesiologists  
+- Occupational Therapists  
+...or any clinic where you have the name and address.
+
+---
+
+## 🗂️ How to Use
+
+1. **Prepare your Excel input file (`.xlsx`)**  
+   The file should have the following columns:
+   - `Clinic/Facility Name`  
+   - `Street Address`  
+   - `Clinic Hours` (leave blank; the script will fill this in)
+
+2. **Run the Script**  
+   - Execute the Python script (`clinic_hours_finder.py`) using your terminal or IDE.
+
+3. **Output**  
+   - The script will update the Excel file with the most likely clinic hours found online.
+
+---
+
+## 🔁 To Use with Other Allied Health Providers
+
+### ✅ Step 1: Update Your Input File
+Use a spreadsheet with **clinic names and addresses** for any type of health provider (e.g., chiropractors, RMTs). The structure remains the same.
+
+### ✅ Step 2: Adjust Script (Optional)
+If the script uses provider-specific search keywords (e.g., "physiotherapy clinic hours"), you may:
+- Modify the search query format in the script to better reflect the type of provider (e.g., "chiropractic clinic hours" or "RMT clinic opening times").
+
+> 💡 In many cases, **no code changes are needed** — just change the input Excel content.
+
+---
+
+## 🔧 Dependencies
+Make sure required libraries like `pandas`, `openpyxl`, and any scraping or search modules used in your script are installed.
+
+---
+
+## ✅ Example Use Cases
+- Finding hours for 500+ chiropractic clinics
+- Scraping operational hours for RMT or physio clinics across cities
+- Auditing business listings for completeness
+
+This tool is flexible and scalable for general use across healthcare business data collection tasks.
 
